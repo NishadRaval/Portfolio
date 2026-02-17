@@ -1,0 +1,64 @@
+.skills {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, var(--bg-color) 0%, #0a0a0a 50%, var(--bg-color) 100%);
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skills-intro {
+    text-align: center;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.skills-marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    /* Fade edges */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+    display: inline-flex;
+    gap: 4rem;
+    padding-left: 4rem;
+    /* Initial spacing */
+}
+
+/* Pause animation on hover */
+.skills-marquee:hover .marquee-track {
+    animation-play-state: paused !important;
+    /* Forces Framer Motion to pause if using CSS animation, but for Motion we need listener */
+}
+
+.skill-item {
+    font-size: 5rem;
+    /* Larger */
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: default;
+    opacity: 0.6;
+}
+
+.skill-item:hover {
+    color: #4ecdc4;
+    /* Cyan pop */
+    -webkit-text-stroke: 1px #4ecdc4;
+    opacity: 1;
+    transform: scale(1.1);
+    text-shadow: 0 0 20px rgba(78, 205, 196, 0.4);
+}

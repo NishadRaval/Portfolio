@@ -1,0 +1,154 @@
+.projects-main {
+    position: relative;
+    background: var(--bg-color);
+    padding: 5vh 0;
+    z-index: 5;
+    /* Ensure above footer */
+}
+
+.projects-intro {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-main);
+    text-align: center;
+}
+
+.projects-intro h2 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.card-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+
+.card-wrapper {
+    position: relative;
+    width: 1000px;
+    max-width: 90vw;
+    height: 500px;
+    transform-origin: top;
+    cursor: pointer;
+}
+
+.card-body {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.card-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.card-inner-image {
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    /* Inherit color from card-body for placeholder */
+    /* If rendering an image, place it here */
+    filter: brightness(0.8);
+    transition: filter 0.3s;
+}
+
+.card-wrapper:hover .card-inner-image {
+    filter: brightness(1);
+}
+
+/* --- VISIBILITY FIX: Hardcore Project Card Styles --- */
+
+.card-header,
+.card-footer {
+    position: relative;
+    z-index: 10;
+    /* Force text on top */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    color: white !important;
+    /* Force white text */
+}
+
+.card-header h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 5px 30px rgba(0, 0, 0, 1);
+    /* Maximum shadow for readability */
+    z-index: 10;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin: 0;
+}
+
+.card-header span,
+.card-footer span {
+    color: white !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent backing for tags */
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-inner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    filter: brightness(0.4);
+    /* Make background dark so text pops */
+    transition: transform 0.7s ease, filter 0.5s ease;
+}
+
+.card-wrapper:hover .card-inner-image img {
+    transform: scale(1.05);
+    filter: brightness(0.3);
+    /* Even darker on hover */
+}
+
+/* Strong Gradient Overlay */
+.card-inner-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.2) 40%,
+            rgba(0, 0, 0, 0.2) 60%,
+            rgba(0, 0, 0, 0.9) 100%);
+    z-index: 2;
+    border-radius: 20px;
+    pointer-events: none;
+}
