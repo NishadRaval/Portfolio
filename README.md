@@ -3,8 +3,6 @@
 > A high-performance, immersive portfolio website featuring 3D elements, smooth scroll physics, and award-winning "WOW" animations.
 
 ![Portfolio Preview](./public/preview.png)
-*(Replace with a screenshot of your portfolio)*
-
 ## ✨ Key Features
 
 This portfolio was designed to feel **premium, interactive, and "alive"**. It goes beyond static websites with deep visual layers and physics-based interactions.

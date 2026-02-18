@@ -28,7 +28,7 @@ const projects = [
         color: "#4ecdc4",
         bg: "#111",
         github: "https://github.com/NishadRaval/stock-crypto-analyzer",
-        live: "https://stock-crypto-analyzer.vercel.app/",
+        live: "https://aistock-analyzer.streamlit.app/",
         description: "AI Stock & Crypto Analyzer is a financial analysis web application that evaluates Indian (NSE/BSE), US stocks, and cryptocurrencies using AI-driven logic and fundamental metrics. The platform provides short-term predictions, long-term investment recommendations, valuation insights, and interactive price charts to help users make data-informed decisions. Built with Python and Streamlit, the application combines financial data processing, AI-based scoring, and real-time visualization into a clean, responsive dashboard.",
         features: ["Real-Time AI Chat Interface: Smooth conversational UI with dynamic message rendering and persistent history",
             "Code Snippet Support with Syntax Highlighting: Properly formatted and readable code blocks inside chat responses.",
