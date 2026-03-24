@@ -1,0 +1,80 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --background: #ffffff;
+  --surface: #fafafa;
+  --foreground: #111111;
+  --foreground-muted: #666666;
+  --border: rgba(0, 0, 0, 0.05);
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body.dark {
+  --background: #0a0a0a;
+  --surface: #111111;
+  --foreground: #ffffff;
+  --foreground-muted: #888888;
+  --border: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--foreground-muted);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+
+/* Base cursor hiding for custom cursor */
+/* Explicitly targeting every dominant tag and typography node */
+@media (pointer: fine) {
+  body, button, a, input, textarea, select, span, p, h1, h2, h3, h4, h5, h6, div, section, article, nav, header, footer,
+  :global(body), :global(a), :global(button) {
+    cursor: none !important;
+  }
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

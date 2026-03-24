@@ -1,0 +1,154 @@
+.navbarPill {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  background: var(--background);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.05em;
+  color: var(--foreground);
+}
+
+.desktopLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.desktopLinks a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--foreground);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.desktopLinks a:hover {
+  opacity: 0.5;
+}
+
+.contactBtn {
+  background: var(--foreground);
+  color: var(--background) !important;
+  padding: 0.6rem 1.5rem;
+  border-radius: 9999px;
+  transition: transform 0.2s ease;
+}
+
+.contactBtn:hover {
+  opacity: 1 !important;
+  transform: scale(1.05);
+}
+
+.themeToggleBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.themeToggleBtn:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.mobileControls {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
+
+.themeToggleBtnMobile {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileMenuBtn {
+  background: var(--foreground);
+  color: var(--background);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Fullscreen Curtain Menu */
+.mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--background);
+  padding: 5vh 5vw;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+}
+
+.overlayHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.closeBtn {
+  background: transparent;
+  color: var(--foreground);
+  border: none;
+  cursor: pointer;
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.mobileLinks a {
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  color: var(--foreground);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .desktopLinks { display: none; }
+  .mobileControls { display: flex; }
+  .navbarPill { padding: 0.5rem 0.5rem 0.5rem 1.5rem; width: 95%; max-width: 95%; }
+}

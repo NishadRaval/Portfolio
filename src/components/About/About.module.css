@@ -1,0 +1,115 @@
+.about {
+  padding: 12rem 5vw;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15rem; /* Massive breathing room between bio and services */
+}
+
+.subLabel {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--foreground-muted);
+  margin-bottom: 3rem;
+  display: block;
+}
+
+/* Biograhpy Section */
+.bioSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.bioText {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1100px;
+}
+
+.bioHeadline {
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.bioParagraph {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--foreground-muted);
+  max-width: 800px;
+}
+
+/* Services Grid */
+.servicesSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  column-gap: 5rem;
+}
+
+.serviceCard {
+  border-top: 1px solid var(--border);
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-top-color 0.4s ease;
+}
+
+.serviceCard:hover {
+  border-top-color: var(--foreground);
+}
+
+.serviceTop {
+  margin-bottom: 4rem;
+}
+
+.serviceNumber {
+  font-size: 0.9rem;
+  color: var(--foreground-muted);
+}
+
+.serviceTitle {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.serviceDesc {
+  font-size: 1.15rem;
+  color: var(--foreground-muted);
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+@media (max-width: 900px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    gap: 8rem;
+  }
+  .about {
+    padding: 8rem 5vw;
+  }
+  .serviceTitle {
+    font-size: 2rem;
+  }
+}

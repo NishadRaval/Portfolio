@@ -1,0 +1,117 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: var(--background);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pure CSS Abstract Aura Rendering */
+.auroraContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.6; 
+  mix-blend-mode: normal;
+}
+
+/* Adaptive fading for flawless Dark Mode contrast */
+:global(.dark) .auroraContainer {
+  opacity: 0.3;
+}
+
+/* Form-defining blur */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform;
+  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.orb1 {
+  width: 25vw;
+  height: 25vw;
+  background: var(--foreground-muted);
+  top: 10%;
+  left: 10%;
+}
+
+.orb2 {
+  width: 30vw;
+  height: 30vw;
+  background: var(--foreground);
+  bottom: 20%;
+  right: 15%;
+}
+
+.orb3 {
+  width: 20vw;
+  height: 20vw;
+  background: var(--foreground-muted);
+  top: 15%;
+  right: 25%;
+}
+
+.orb4 {
+  width: 28vw;
+  height: 28vw;
+  background: var(--foreground);
+  bottom: 10%;
+  left: 20%;
+}
+
+/* Typography locks */
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+  padding: 0 5vw;
+}
+
+.greeting {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--foreground-muted);
+  margin-bottom: 2.5rem;
+}
+
+.headline {
+  font-size: clamp(3rem, 10vw, 9rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.subtext {
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--foreground-muted);
+  max-width: 650px;
+  margin-top: 3.5rem;
+  line-height: 1.8;
+}
+
+/* Strict Mobile Bounds */
+@media (max-width: 768px) {
+  .headline { font-size: 3rem; }
+  .subtext { font-size: 1rem; margin-top: 2rem; }
+  .orb1, .orb2, .orb3, .orb4 { filter: blur(40px); }
+}
