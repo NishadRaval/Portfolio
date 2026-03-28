@@ -7,7 +7,7 @@
 </p>
 
 ## Overview
-A high-end, Awwwards-tier personal portfolio architected from the ground up to showcase specialized digital services including Full-Stack Web Development, App Engineering, and Website Transformation. 
+A high-end, personal portfolio architected from the ground up to showcase specialized digital services including Full-Stack Web Development, App Engineering, and Website Transformation. 
 
 Designed with absolute mobile-first precision, relentless CSS fluid grids, and zero-latency physics-based micro-interactions.
 
