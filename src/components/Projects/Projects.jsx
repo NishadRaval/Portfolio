@@ -10,6 +10,16 @@ import styles from './Projects.module.css';
    ========================================== */
 export const projectsData = [
   {
+    id: 4,
+    title: 'SpendSense',
+    type: 'Personal Project / 2026',
+    shortDescription: 'Full-Stack MERN Expense Tracker',
+    fullDescription: 'Designed and developed a full-stack expense tracking web application using the MERN stack. SpendSense allows users to securely register and log in, track income and expenses by category, set monthly budgets with visual progress bars, and view interactive spending analytics through pie and bar charts. The app features JWT-based authentication ensuring each user\'s data is completely private and isolated. Built with React and Vite on the frontend, Node.js and Express.js on the backend, and MongoDB Atlas as the cloud database. Fully deployed with the frontend on Vercel and the backend API on Render.',
+    tech: ['React', 'Node.js', 'MongoDB', 'Express.js', 'JWT', 'Vercel', 'Render'],
+    liveLink: 'https://spendsenseweb.vercel.app',
+    github: 'https://github.com/NishadRaval/SpendSense'
+  },
+  {
     id: 1,
     title: 'Chachabhatija Food Club Website',
     type: 'Client Project / 2025',
