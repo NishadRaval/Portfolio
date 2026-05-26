@@ -1,4 +1,4 @@
-# Nishad Raval | Elite Independent Developer
+# Nishad Raval | Independent Developer
 
 <p align="left">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
