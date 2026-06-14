@@ -31,6 +31,22 @@ const Resume = () => {
           <BlurReveal delay={0.4}>
             <div className={styles.timelineItem}>
               <div className={styles.timeMeta}>
+                <h3>Node.js Intern</h3>
+                <p className={styles.dateLabel}>11/05/2026 – 03/06/2026</p>
+              </div>
+              <div className={styles.timeContent}>
+                <h4>Shv Infotech</h4>
+                <span className={styles.location}>Surat, Gujarat</span>
+                <p className={styles.desc}>
+                  Learned practical backend development using Node.js, focusing on API development and server-side concepts. Explored database integration and request-response handling. Participated in debugging and testing, built full-stack concepts, and improved problem-solving skills through a real development workflow.
+                </p>
+              </div>
+            </div>
+          </BlurReveal>
+
+          <BlurReveal delay={0.5}>
+            <div className={styles.timelineItem}>
+              <div className={styles.timeMeta}>
                 <h3>Independent Developer</h3>
                 <p className={styles.dateLabel}>Present</p>
               </div>
@@ -45,7 +61,7 @@ const Resume = () => {
           </BlurReveal>
         </div>
 
-        <BlurReveal delay={0.5}>
+        <BlurReveal delay={0.6}>
           <div className={styles.downloadWrapper}>
             {/* INSTRUCTION: Place your actual resume PDF in the 'public' folder and name it 'resume.pdf' */}
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadBtn}>

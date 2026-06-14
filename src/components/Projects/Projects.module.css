@@ -217,6 +217,17 @@
   max-width: 800px;
 }
 
+.featureList {
+  margin-bottom: 4rem;
+  padding-left: 1.5rem;
+  max-width: 800px;
+}
+
+.featureList li {
+  margin-bottom: 0.5rem;
+  color: var(--foreground-muted);
+}
+
 .buttonGroup {
   display: flex;
   flex-wrap: wrap;

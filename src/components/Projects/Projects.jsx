@@ -14,7 +14,21 @@ export const projectsData = [
     title: 'SpendSense',
     type: 'Personal Project / 2026',
     shortDescription: 'Full-Stack MERN Expense Tracker',
-    fullDescription: 'Designed and developed a full-stack expense tracking web application using the MERN stack. SpendSense allows users to securely register and log in, track income and expenses by category, set monthly budgets with visual progress bars, and view interactive spending analytics through pie and bar charts. The app features JWT-based authentication ensuring each user\'s data is completely private and isolated. Built with React and Vite on the frontend, Node.js and Express.js on the backend, and MongoDB Atlas as the cloud database. Fully deployed with the frontend on Vercel and the backend API on Render.',
+    fullDescription: 'Built a full-stack Expense Tracker web application to manage and monitor expenses. Designed and developed using the MERN stack. SpendSense allows users to securely register and log in, track income and expenses by category, set monthly budgets with visual progress bars, and view interactive spending analytics through pie and bar charts. The app features JWT-based authentication ensuring each user\'s data is completely private and isolated. Fully deployed with the frontend on Vercel and the backend API on Render.',
+    features: [
+      'Add expenses',
+      'View expense records',
+      'Category management',
+      'Dashboard and tracking',
+      'Backend API integration',
+      'Database connectivity'
+    ],
+    learnings: [
+      'Full-stack architecture',
+      'API integration',
+      'Frontend–backend communication',
+      'Debugging and deployment workflow'
+    ],
     tech: ['React', 'Node.js', 'MongoDB', 'Express.js', 'JWT', 'Vercel', 'Render'],
     liveLink: 'https://spendsenseweb.vercel.app',
     github: 'https://github.com/NishadRaval/SpendSense'
@@ -98,10 +112,12 @@ const Projects = () => {
   useEffect(() => {
     if (selectedProject) {
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
     }
   }, [selectedProject]);
+
+  const handleExitComplete = () => {
+    document.body.style.overflow = 'unset';
+  };
 
   return (
     <>
@@ -125,7 +141,7 @@ const Projects = () => {
         </div>
       </section>
 
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={handleExitComplete}>
         {selectedProject && (
           <motion.div
             className={styles.modalOverlay}
@@ -160,6 +176,28 @@ const Projects = () => {
                 <div className={styles.modalBody}>
                   <h3>Project Overview</h3>
                   <p>{selectedProject.fullDescription}</p>
+
+                  {selectedProject.features && (
+                    <>
+                      <h3>Features</h3>
+                      <ul className={styles.featureList}>
+                        {selectedProject.features.map((feature, i) => (
+                          <li key={i}>{feature}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {selectedProject.learnings && (
+                    <>
+                      <h3>What I Learned</h3>
+                      <ul className={styles.featureList}>
+                        {selectedProject.learnings.map((learning, i) => (
+                          <li key={i}>{learning}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
 
                   {/* DUAL ACTION BUTTONS */}
                   <div className={styles.buttonGroup}>
